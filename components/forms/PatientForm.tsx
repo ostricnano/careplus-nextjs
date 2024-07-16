@@ -16,7 +16,7 @@ import { createUser } from "@/lib/actions/patient.actions";
 
 export enum FormFieldType {
   INPUT = "input",
-  TEXTARE = "textarea",
+  TEXTAREA = "textarea",
   CHECKBOX = "checkbox",
   PHONE_INPUT = "phoneInput",
   DATE_PICKER = "datePicker",
@@ -39,7 +39,7 @@ const PatientForm = () => {
   });
 
   // 2. Define a submit handler.
-  async function onSubmit({ name, email, phone }: z.infer<typeof UserFormValidation>) {
+  const onSubmit = async ({ name, email, phone }: z.infer<typeof UserFormValidation>) => {
     setIsLoading(true)
     try {
       const userData = { name, email, phone };
