@@ -39,7 +39,7 @@ const AppointmentForm = ({
   userId: string;
   patientId: string;
   appointment?: Appointment;
-  setOpen: (open: boolean) => void;
+  setOpen?: (open: boolean) => void;
 }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
